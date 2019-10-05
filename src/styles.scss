@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/clearfix";
+@import "assets/checkbox";
+@import "assets/radio";
+
+@font-face {
+  font-family: 'Graphik';
+  src: local('Graphik Regular'), local('Graphik-Regular'),
+  url('assets/font/Graphik-Regular.woff2') format('woff2'),
+  url('assets/font/Graphik-Regular.woff') format('woff'),
+  url('assets/font/Graphik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html * {
+  font-family: 'Graphik', serif !important;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  background: #000000;
+  color: white;
+  font-size: 12px;
+  border: 0;
+  letter-spacing: 0.2px;
+
+  &:hover {
+    background: #333333;
+  }
+}
+
+input, select {
+  height: 40px;
+  background: #FBFBFB;
+  border: 1px solid #CACACA;
+  padding: 0 17px;
+
+  font-size: 14px;
+  color: #000000;
+}
+
+label {
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #757575;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #757575;
+  margin-bottom: 10px;
+}

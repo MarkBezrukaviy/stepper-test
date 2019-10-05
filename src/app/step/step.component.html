@@ -1,0 +1,43 @@
+<form [formGroup]="form">
+  <ng-container *ngFor="let field of data; index as i">
+    <div class="flex-column" [ngSwitch]="field?.type">
+      <ng-container *ngSwitchCase="'inputText'">
+        <label [for]="field?.name">{{field?.label}}</label>
+        <input [id]="field?.name" [formControlName]="field?.name" type="text">
+      </ng-container>
+      <ng-container *ngSwitchCase="'inputNumber'">
+        <label [for]="field?.name">{{field?.label}}</label>
+        <input [id]="field?.name" [formControlName]="field?.name" type="number">
+      </ng-container>
+      <ng-container *ngSwitchCase="'select'">
+        <label [for]="field?.name">{{field?.label}}</label>
+        <select [id]="field?.name" [formControlName]="field?.name">
+          <option *ngFor="let option of field?.options" [ngValue]="option?.value || option">{{option?.label || option}}</option>
+        </select>
+      </ng-container>
+      <ng-container *ngSwitchCase="'checkbox'">
+        <div class="checkbox" >
+          <label [for]="field?.name">
+            <input [id]="field?.name" [formControlName]="field?.name" type="checkbox">
+            <span class="checkbox-material">
+              <span class="check"></span>
+            </span>
+            {{field?.label}}
+          </label>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchCase="'radio'">
+        <p>{{field?.label}}</p>
+        <div class="radio-box">
+          <div *ngFor="let radio of field?.options; index as i">
+            <input class="radio-custom" [id]="'radio' + i" [formControlName]="field?.name" type="radio" [value]="radio?.value">
+            <label class="radio-custom-label" [for]="'radio' + i">{{radio?.label}}</label>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container *ngSwitchDefault>
+        <p>{{field?.type}} not found</p>
+      </ng-container>
+    </div>
+  </ng-container>
+</form>

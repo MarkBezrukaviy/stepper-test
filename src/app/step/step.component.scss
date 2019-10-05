@@ -1,0 +1,23 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  label {
+    margin-bottom: 5px;
+  }
+}
+
+.radio-box {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+  &>div {
+    margin-right: 15px;
+  }
+
+  .radio-custom-label {
+    font-size: 14px;
+  }
+}

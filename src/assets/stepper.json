@@ -1,0 +1,148 @@
+[
+  {
+    "title": "First step",
+    "form": [
+      {
+        "label": "First name",
+        "name": "firstName",
+        "type": "inputText"
+      },
+      {
+        "label": "Last name",
+        "name": "lastName",
+        "type": "inputText"
+      },
+      {
+        "label": "Checkbox",
+        "name": "isActive",
+        "type": "checkbox"
+      },
+      {
+        "label": "City",
+        "name": "city",
+        "type": "select",
+        "options": [
+          {
+            "label": "Kyiv",
+            "value": 1
+          },
+          {
+            "label": "Odessa",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "label": "Radio",
+        "name": "test",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Test1",
+            "value": 1
+          },
+          {
+            "label": "Test2",
+            "value": 2
+          },
+          {
+            "label": "Test3",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Second step",
+    "form": [
+      {
+        "label": "Phone",
+        "name": "phone",
+        "type": "inputNumber"
+      },
+      {
+        "label": "Checkbox",
+        "name": "isActive",
+        "type": "checkbox"
+      },
+      {
+        "label": "Last name",
+        "name": "lastName",
+        "type": "inputText"
+      },
+      {
+        "label": "City",
+        "name": "city",
+        "type": "select",
+        "options": ["Kyiv","Odessa"
+        ]
+      },
+      {
+        "label": "Radio",
+        "name": "test",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Male",
+            "value": 1
+          },
+          {
+            "label": "Female",
+            "value": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Third step",
+    "form": [
+      {
+        "label": "First name",
+        "name": "firstName",
+        "type": "inputText"
+      },
+      {
+        "label": "Last name",
+        "name": "lastName",
+        "type": "inputText"
+      },
+      {
+        "label": "Checkbox",
+        "name": "isActive",
+        "type": "checkbox"
+      },
+      {
+        "label": "City",
+        "name": "city",
+        "type": "select",
+        "options": [
+          {
+            "label": "Kyiv",
+            "value": 1
+          },
+          {
+            "label": "Odessa",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "label": "Radio",
+        "name": "test",
+        "type": "radio",
+        "options": [
+          {
+            "label": "Male",
+            "value": 1
+          },
+          {
+            "label": "Female",
+            "value": 2
+          }
+        ]
+      }
+    ]
+  }
+]

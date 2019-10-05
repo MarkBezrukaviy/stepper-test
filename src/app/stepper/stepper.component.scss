@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 15px;
+
+  .header-item {
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .header-icon {
+      position: relative;
+      border-radius: 50%;
+      height: 24px;
+      width: 24px;
+      background-color: rgba(0,0,0,.54);
+      color: #fff;
+      margin-right: 5px;
+
+      &.active {
+        background-color: rgba(0, 12, 145, 0.54);
+      }
+
+      .header-icon-number {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .button-box {
+    display: flex;
+    flex: 1 1;
+
+    &.button-prev {
+      justify-content: flex-start;
+    }
+
+    &.button-next {
+      justify-content: flex-end;
+    }
+  }
+}

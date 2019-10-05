@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="header-item"
+       *ngFor="let stepSetting of settings; index as i"
+       (click)="setActiveStep(i)">
+    <div class="header-icon" [ngClass]="{'active': isActive(i)}">
+      <div class="header-icon-number">{{i + 1}}</div>
+    </div>
+    {{stepSetting?.title}}
+  </div>
+</div>
+<div class="body">
+  <ng-container *ngFor="let stepSetting of settings; index as i">
+    <div class="body-item"
+         *ngIf="isActive(i)"
+         (click)="setActiveStep(i)">
+      <app-step [data]="stepSetting?.form" [form]="forms.at(i)"></app-step>
+    </div>
+  </ng-container>
+</div>
+<div class="footer">
+  <div class="button-box button-prev" *ngIf="activeStep > 0">
+    <button (click)="previousStep()">Previous step</button>
+  </div>
+  <div class="button-box button-next" *ngIf="activeStep < settings?.length - 1">
+    <button (click)="nextStep()">Next step</button>
+  </div>
+</div>
