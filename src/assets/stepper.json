@@ -34,7 +34,7 @@
       },
       {
         "label": "Radio",
-        "name": "test",
+        "name": "radio",
         "type": "radio",
         "options": [
           {
@@ -63,24 +63,26 @@
       },
       {
         "label": "Checkbox",
-        "name": "isActive",
+        "name": "isEnable",
         "type": "checkbox"
       },
       {
-        "label": "Last name",
-        "name": "lastName",
+        "label": "name",
+        "name": "name",
         "type": "inputText"
       },
       {
         "label": "City",
-        "name": "city",
+        "name": "citySecond",
         "type": "select",
-        "options": ["Kyiv","Odessa"
+        "options": [
+          "Kyiv",
+          "Odessa"
         ]
       },
       {
         "label": "Radio",
-        "name": "test",
+        "name": "radioSecond",
         "type": "radio",
         "options": [
           {
@@ -99,23 +101,23 @@
     "title": "Third step",
     "form": [
       {
-        "label": "First name",
-        "name": "firstName",
+        "label": "Test",
+        "name": "test",
         "type": "inputText"
       },
       {
-        "label": "Last name",
-        "name": "lastName",
+        "label": "test2",
+        "name": "test2",
         "type": "inputText"
       },
       {
-        "label": "Checkbox",
-        "name": "isActive",
+        "label": "test3",
+        "name": "test3",
         "type": "checkbox"
       },
       {
-        "label": "City",
-        "name": "city",
+        "label": "test4",
+        "name": "test4",
         "type": "select",
         "options": [
           {
@@ -129,8 +131,8 @@
         ]
       },
       {
-        "label": "Radio",
-        "name": "test",
+        "label": "test5",
+        "name": "test5",
         "type": "radio",
         "options": [
           {

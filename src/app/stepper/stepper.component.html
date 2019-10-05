@@ -9,13 +9,16 @@
   </div>
 </div>
 <div class="body">
-  <ng-container *ngFor="let stepSetting of settings; index as i">
-    <div class="body-item"
-         *ngIf="isActive(i)"
-         (click)="setActiveStep(i)">
-      <app-step [data]="stepSetting?.form" [form]="forms.at(i)"></app-step>
-    </div>
+  <ng-container *ngIf="settings?.length; else stepsNotFound">
+    <ng-container *ngFor="let stepSetting of settings; index as i">
+      <div class="body-item"
+           *ngIf="isActive(i)"
+           (click)="setActiveStep(i)">
+        <app-step [data]="stepSetting?.form" [form]="form"></app-step>
+      </div>
+    </ng-container>
   </ng-container>
+  <ng-template #stepsNotFound>Steps not found</ng-template>
 </div>
 <div class="footer">
   <div class="button-box button-prev" *ngIf="activeStep > 0">

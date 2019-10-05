@@ -6,8 +6,8 @@ export interface IStepper {
 export interface IStepperForm {
   label: string,
   name: string,
-  type: 'input' | 'checkbox' | 'select' | 'radio',
-  options?: IStepperOptions[]
+  type: 'inputText' | 'inputNumber' | 'checkbox' | 'select' | 'radio',
+  options?: IStepperOptions[] | string[]
 }
 
 export interface IStepperOptions {

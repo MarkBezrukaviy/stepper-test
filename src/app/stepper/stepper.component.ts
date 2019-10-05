@@ -10,10 +10,10 @@ import {IStepper, IStepperForm} from '../models/stepper';
 export class StepperComponent implements OnInit {
   @Input() settings: IStepper[];
   public activeStep: number;
-  public forms: FormArray;
+  public form: FormGroup;
 
   constructor(private _fb: FormBuilder) {
-    this.forms = this._fb.array([]);
+    this.form = this._fb.group({});
     this.activeStep = 0;
   }
 
@@ -23,13 +23,11 @@ export class StepperComponent implements OnInit {
 
   setupForms() {
     this.settings.forEach((setting: IStepper) => {
-      let formGroup: FormGroup = this._fb.group({});
-
       setting.form.forEach((item: IStepperForm) => {
-        formGroup.addControl(item.name, this._fb.control(null));
+        if (!this.form.contains(item.name)) {
+          this.form.addControl(item.name, this._fb.control(null));
+        }
       });
-
-      this.forms.push(formGroup);
     });
   }
 
